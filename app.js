@@ -112,18 +112,19 @@ var objectA = {
   city: 'Chicago'
 }
 var expectedKeys = [
-  'id', 'name', 'age', 'city'
+  'id', 'test', 'age', 'city'
 ];
 
 function validateKeys(object, expectedKeys) {
   let newArray = Object.keys(object);
   for (i = 0; i < expectedKeys.length; i++){
-    if (expectedKeys[i] === newArray[i]) {
-      return true
-    } else {
-      return false
+    if (!(expectedKeys[i] === newArray[i])) {
+      return false;
     }
   }
+  return true;
 }
+
+
 const validater = validateKeys(objectA, expectedKeys);
 console.log(validater);
