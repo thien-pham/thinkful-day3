@@ -33,18 +33,57 @@ const people = [
 	},
 	{
 		name: 'Thien',
-		job_title: 'Developer'
+		job_title: 'Developer',
+		boss: 'Dakota'
 	},
 	{
 		name: 'Taylor',
-		job_title: 'Traffic Manager'
+		job_title: 'Traffic Manager',
+		boss: 'Thien'
 	},
 	{
 		name: 'Byrd',
-		job_title: 'Animator'
+		job_title: 'Animator',
+		boss: 'Taylor'
 	}
 ]
 
+// for (let key in people) {
+// 	console.log(`${people[key].name}: ${people[key].job_title}`);
+// }
+
 for (let key in people) {
-	console.log(`${people[key].name}: ${people[key].job_title}`);
+	if (people[key].hasOwnProperty('boss')) {
+		console.log(`${people[key].job_title} ${people[key].name} reports to ${people[key].boss}.`);	
+	}
+	else {
+		console.log(`${people[key].job_title} ${people[key].name} doesn't report to anybody.`);
+	}
+	// console.log(`${people[key].name}: ${people[key].job_title}`);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
